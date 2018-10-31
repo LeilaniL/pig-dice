@@ -1,21 +1,13 @@
-# _Beep-bop Code Generator_
+# Pig Dice
 
-http://maxdhs.github.io/beep-bop
+#### A webpage that randomly generates numbers for dice rolls and totals for each player.
 
-#### A webpage that codes a user inputted number.
-
-#### By **Maxwell Dubin**
+#### By **Leilani Leach and Maxwell Dubin**
 
 ## Description
 
-A webpage which generates a coded string message by inputting a number from the user and transforming the number with a set of "Beeps", "Bops", and messages.
+A webpage which lets two players play a game of pig dice, rolling dice until someone reaches a total score of 50. On their turn, a player can choose to keep rolling and adding to their total, or click hold and play passes to the next player. If the player doesn't click hold and rolls a 1, their current turn's score will reset to zero and their turn will be over.
 
-### Specs
-| Spec | Input | Output |
-| :-------------     | :------------- | :------------- |
-| Program replaces 0 with "Beep!" |"0" |  "Beep" |
-| Program replaces numbers containing a 1 with "Boop!"| "1" |  "Boop!" |
-| Program replaces numbers divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that."| "3" |  "I'm sorry, Dave. I'm afraid I can't do that." |
 
 ## Setup/Installation Requirements
 
@@ -34,12 +26,8 @@ A webpage which generates a coded string message by inputting a number from the 
 * _JavaScript_
 * _jQuery_
 
-## Support and contact details
-
-_Contact Maxwell Dubin - maxdhs@gmail.com._
-
 ### License
 
 *{This software is licensed under the MIT license}*
 
-Copyright (c) 2018 **_Maxwell Dubin_**
+Copyright (c) 2018 **_Maxwell Dubin and Leilani Leach_**
