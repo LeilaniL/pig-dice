@@ -25,6 +25,12 @@ function holdDice() {
   }
   turnTotal = 0;
   turnIndicator ++;
+  if(player1.score >= 50) {
+    alert ("Player 1 wins!")
+  }
+  if(player2.score >= 50) {
+    alert ("Player 2 wins!")
+  }
 }
 
 function playGame (){

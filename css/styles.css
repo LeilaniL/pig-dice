@@ -20,6 +20,13 @@ h1 {
   justify-content: center;
 }
 
+.center {
+    display: block;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
 
 .flex-container > div {
   margin: 40px;
