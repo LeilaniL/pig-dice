@@ -9,22 +9,34 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
+    <div class="container">
+      <h1>Pig Dice</h1>
+      <p>
+        Would you like a human or computer opponent?
+      </p>
+      <div id="computerListener">
+        <label for="radio">Human</label>
+        <input type="radio" name="opponent" value="human" checked>
+        <label for="radio">Computer</label>
+        <input type="radio" name="opponent" value="computer">
+      </div>
 
-    <button id="rollDice">Roll Dice</button>
-    <p>
-      Current Dice Roll: <span id="currentDiceRoll"></span>
-    </p>
-    <p>
-      Current Turn Total: <span id="turnTotal"></span>
-    </p>
-    <button id="holdDice">Hold Dice</button>
-    <button id="newGame">New Game</button>
-    <p>
-      Player 1 Score: <span id="player1Score"></span>
-    </p>
-    <p>
-      Player 2 Score: <span id="player2Score"></span>
-    </p>
+      <button id="rollDice">Roll Dice</button>
 
+      <p>
+        Current Dice Roll: <span id="currentDiceRoll"></span>
+      </p>
+      <p>
+        Current Turn Total: <span id="turnTotal"></span>
+      </p>
+      <button id="holdDice">Hold Dice</button>
+      <button id="newGame">New Game</button>
+      <p id="player1Display">
+        Player 1 Score: <span id="player1Score"></span>
+      </p>
+      <p id="player2Display">
+        Player 2 Score: <span id="player2Score"></span>
+      </p>
+    </div>
   </body>
 </html>

@@ -14,12 +14,22 @@ var diceRoll = 0;
 function holdDice() {
   if (turnIndicator % 2 == 0) {
     player1.score += turnTotal;
+    $("#player1Display").toggleClass("currentPlayer");
+    $("#player2Display").toggleClass("currentPlayer");
+
   }
   else {
     player2.score += turnTotal;
+    $("#player1Display").toggleClass("currentPlayer");
+    $("#player2Display").toggleClass("currentPlayer");
   }
   turnTotal = 0;
   turnIndicator ++;
+  if(opponentType=="computer"){
+    playGame();
+    playGame();
+    alert(player2.score);
+  }
 }
 
 function playGame (){
@@ -31,6 +41,8 @@ function playGame (){
       else {
         turnTotal = 0;
         turnIndicator ++;
+        $("#player1Display").toggleClass("currentPlayer");
+        $("#player2Display").toggleClass("currentPlayer");
       }
   }
   else {
@@ -42,8 +54,16 @@ function playGame (){
     }
   }
 }
-
 $(document).ready(function(){
+
+  $("#computerListener").click(function() {
+    opponentType =($('input[name=opponent]:checked').val());
+    })
+
+  $("#player1Display").toggleClass("currentPlayer");
+
+  opponentType =($('input[name=opponent]:checked').val());
+
   $("#rollDice").click(function(event) {
     playGame();
     $("span#currentDiceRoll").text(diceRoll);
@@ -54,7 +74,6 @@ $(document).ready(function(){
     holdDice();
     $("span#player1Score").text(player1.score);
     $("span#player2Score").text(player2.score);
-
   });
 
   $("#newGame").click(function(event) {
