@@ -27,8 +27,12 @@ function holdDice() {
   turnIndicator ++;
   if(opponentType=="computer"){
     playGame();
-    playGame();
-    alert(player2.score);
+    player2.score += turnTotal;
+    $("span#player2Score").text(player2.score);
+    $("#player1Display").addClass("currentPlayer");
+    $("#player2Display").removeClass("currentPlayer");
+
+
   }
 }
 
