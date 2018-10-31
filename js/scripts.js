@@ -25,15 +25,6 @@ function holdDice() {
   }
   turnTotal = 0;
   turnIndicator ++;
-  if(opponentType=="computer"){
-    playGame();
-    player2.score += turnTotal;
-    $("span#player2Score").text(player2.score);
-    $("#player1Display").addClass("currentPlayer");
-    $("#player2Display").removeClass("currentPlayer");
-
-
-  }
 }
 
 function playGame (){
@@ -60,17 +51,11 @@ function playGame (){
 }
 $(document).ready(function(){
 
-  $("#computerListener").click(function() {
-    opponentType =($('input[name=opponent]:checked').val());
-    })
-
   $("#player1Display").toggleClass("currentPlayer");
-
-  opponentType =($('input[name=opponent]:checked').val());
 
   $("#rollDice").click(function(event) {
     playGame();
-    $("span#currentDiceRoll").text(diceRoll);
+    $("#currentDiceRoll").text(diceRoll);
     $("span#turnTotal").text(turnTotal);
   });
 
